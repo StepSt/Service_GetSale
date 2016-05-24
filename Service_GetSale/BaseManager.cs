@@ -92,6 +92,25 @@ namespace Service_GetSale
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+
+        public User GetDataBase_user(int IDuser)
+        {
+            DataTable returnTable = new DataTable();
+            con.Open();
+            SQLiteCommand cmd = con.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Users where ID =" + IDuser.ToString();
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+            adapter.Fill(returnTable);
+            con.Close();
+            User ValueBase = new User();
+            ValueBase.id = returnTable.Rows[0][0].ToString();
+            ValueBase.name = returnTable.Rows[0][1].ToString();
+            ValueBase.Sale_User = returnTable.Rows[0][2].ToString();
+            ValueBase.Fond_User = returnTable.Rows[0][3].ToString();
+            ValueBase.Publicity = returnTable.Rows[0][4].ToString();
+            return ValueBase;
+        }
     }
 
 }

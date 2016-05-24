@@ -58,5 +58,13 @@ namespace Service_GetSale
                baseManager.DelDataBase_procedur(IDproc);
            }
        }
+
+
+       public User GetUserParam(int IDuser)
+       {
+           User user = new User();
+           user = baseManager.GetDataBase_user(IDuser);
+           return user;
+       }
     }
 }

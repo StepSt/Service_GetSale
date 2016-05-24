@@ -16,5 +16,7 @@ namespace Service_GetSale
         void DelDataBase_procedur(int IDproc);
         void SetDataBase_CompletionProcedures(IDprocedure data);
 
+        User GetDataBase_user(int IDuser);
+
     }
 }
