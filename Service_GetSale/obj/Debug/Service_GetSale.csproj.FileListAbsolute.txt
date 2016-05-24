@@ -1,0 +1,8 @@
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\Service_GetSale.dll.config
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\Service_GetSale.dll
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\Service_GetSale.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Debug\Service_GetSale.dll
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Debug\Service_GetSale.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\System.Data.SQLite.dll
+c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\System.Data.SQLite.xml
+C:\Users\Admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Debug\Service_GetSale.csprojResolveAssemblyReference.cache
