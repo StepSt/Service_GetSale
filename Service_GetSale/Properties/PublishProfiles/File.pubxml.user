@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Service_GetSale.dll">
-      <publishTime>05/25/2016 17:07:49</publishTime>
+      <publishTime>05/25/2016 17:58:26</publishTime>
     </File>
     <File Include="bin/System.Data.SQLite.dll">
       <publishTime>05/23/2016 15:32:52</publishTime>

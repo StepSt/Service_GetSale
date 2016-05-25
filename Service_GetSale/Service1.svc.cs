@@ -17,7 +17,7 @@ namespace Service_GetSale
        public int GetIDprocedure(int IDshop, int IDuser)
        {
            Random rnd1 = new Random();
-           IDprocedure iDprocedure = new IDprocedure { IDshop_class = IDshop, IDuser_class = IDuser, IDproc_class = rnd1.Next() };
+           IDprocedure iDprocedure = new IDprocedure { IDshop_class = IDshop, IDuser_class = IDuser, IDproc_class = int.Parse(rnd1.Next().ToString()) };
            baseManager.SetDataBase_procedur(iDprocedure);
            //iDproceduresList.Add(iDprocedure);
            return iDprocedure.IDproc_class;
