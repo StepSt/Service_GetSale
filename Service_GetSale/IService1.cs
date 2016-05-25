@@ -35,12 +35,24 @@ namespace Service_GetSale
             BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json)]
         void PostShopResult(int IDproc);
-        #region App
+#region App
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "GetID?New={new1}",
+            BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json)]
+        User GetID(string new1);
+
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "GetUserParam?IDuser={IDuser}",
             BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json)]
         User GetUserParam(int IDuser);
+        
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "SetUserParam?IDuser={IDuser}&param={param}&value={value}",
+            BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json)]
+        void SetUserParam(int IDuser, string param, string value);
 #endregion
     }
 }

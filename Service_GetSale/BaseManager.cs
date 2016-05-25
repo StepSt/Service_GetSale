@@ -111,6 +111,25 @@ namespace Service_GetSale
             ValueBase.Publicity = returnTable.Rows[0][4].ToString();
             return ValueBase;
         }
+
+
+        public void SetDataBase_User(User data)
+        {
+            con.Open();
+            SQLiteCommand cmd = con.CreateCommand();
+            cmd.CommandText = "INSERT INTO Users ('ID', 'Name', 'Sale_User' , 'Fond_User' , 'Publicity') VALUES ('" + data.id + "', '" + data.name + "', '" + data.Sale_User + "', '" + data.Fond_User + "', '" + data.Publicity + "')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void SetDataBase_User_Param(int IDproc, string var, string value)
+        {
+            con.Open();
+            SQLiteCommand cmd = con.CreateCommand();
+            cmd.CommandText = "UPDATE Users SET " + var + " = " + value + " WHERE ID =" + IDproc + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 
 }

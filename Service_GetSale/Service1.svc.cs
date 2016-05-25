@@ -66,5 +66,25 @@ namespace Service_GetSale
            user = baseManager.GetDataBase_user(IDuser);
            return user;
        }
+
+
+       public User GetID(string new1)
+       {
+           Random rnd1 = new Random();
+           int UserID = rnd1.Next(9999999);
+           User newUser = new User();
+           newUser.id = UserID.ToString();
+           newUser.Sale_User = "5";
+           newUser.Fond_User = "0";
+           newUser.Publicity = "0";
+           newUser.name = " ";
+           baseManager.SetDataBase_User(newUser);
+           return newUser;
+       }
+
+       public void SetUserParam(int IDuser, string param, string value)
+       {
+           baseManager.SetDataBase_User_Param(IDuser,param,value);
+       }
     }
 }

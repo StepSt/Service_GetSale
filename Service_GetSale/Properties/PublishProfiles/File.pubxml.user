@@ -6,11 +6,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Admin\Documents\WebSite</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Admin\Google Диск\Work\StepByStep\WebSite</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Service_GetSale.dll">
-      <publishTime>05/23/2016 16:26:01</publishTime>
+      <publishTime>05/25/2016 17:07:49</publishTime>
     </File>
     <File Include="bin/System.Data.SQLite.dll">
       <publishTime>05/23/2016 15:32:52</publishTime>
@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2016 13:06:16</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/23/2016 16:26:01</publishTime>
+      <publishTime>05/25/2016 15:39:33</publishTime>
     </File>
   </ItemGroup>
 </Project>
