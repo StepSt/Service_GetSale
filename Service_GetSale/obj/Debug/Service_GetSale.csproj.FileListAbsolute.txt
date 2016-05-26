@@ -6,3 +6,4 @@ c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_Get
 c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\System.Data.SQLite.dll
 c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\System.Data.SQLite.xml
 C:\Users\Admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Debug\Service_GetSale.csprojResolveAssemblyReference.cache
+C:\Users\Admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\NLog.dll

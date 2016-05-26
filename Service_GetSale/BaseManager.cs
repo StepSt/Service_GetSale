@@ -5,11 +5,16 @@ using System.Data.SQLite;
 using System.Linq;
 using System.ServiceModel;
 using System.Web;
+using NLog;
+
 namespace Service_GetSale
 {
     public class BaseManager : IBaseManager
     {
         public SQLiteConnection con = new SQLiteConnection(@"Data Source=C:\base\UserBase.db");
+
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
+
         public IDprocedure GetDataBase_procedur(int IDproc)
         {
             DataTable returnTable = new DataTable();
@@ -32,11 +37,25 @@ namespace Service_GetSale
 
         public void SetDataBase_procedur(IDprocedure data)
         {
-            con.Open();
-            SQLiteCommand cmd = con.CreateCommand();
-            cmd.CommandText = "INSERT INTO Procedures ('IDproc_class', 'IDshop_class', 'IDuser_class') VALUES ('" + data.IDproc_class + "', '" + data.IDshop_class + "', '" + data.IDuser_class + "')";
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                _logger.Log(LogLevel.Info, "Начало фунцкции SetDataBase_procedur");
+                con.Open();
+                _logger.Log(LogLevel.Info, "Открыл соединение");
+                SQLiteCommand cmd = con.CreateCommand();
+                _logger.Log(LogLevel.Info, "Форма команды");
+                cmd.CommandText = "INSERT INTO Procedures ('IDproc_class', 'IDshop_class', 'IDuser_class') VALUES ('" + data.IDproc_class + "', '" + data.IDshop_class + "', '" + data.IDuser_class + "')";
+                _logger.Log(LogLevel.Info, "Сформировал команду" + cmd.CommandText);
+                cmd.ExecuteNonQuery();
+                _logger.Log(LogLevel.Info, "Выполнил команду");
+                con.Close();
+                _logger.Log(LogLevel.Info, "Закрыл соеденение");
+            }
+            catch (Exception exception)
+            {
+                con.Close();
+                _logger.Log(LogLevel.Info, exception.ToString());
+            }
             
         }
         public void SetDataBase_procedur(int IDproc, string var)
@@ -61,10 +80,9 @@ namespace Service_GetSale
 
             DataBase ValueBase = new DataBase();
             ValueBase.id = returnTable.Rows[0][0].ToString();
-            ValueBase.Sale_User = returnTable.Rows[0][1].ToString();
-            ValueBase.Fond_User = returnTable.Rows[0][2].ToString();
-            ValueBase.Publicity = returnTable.Rows[0][3].ToString();
-            ValueBase.Fund = returnTable.Rows[0][4].ToString();
+            ValueBase.Sale_User = returnTable.Rows[0][2].ToString();
+            ValueBase.Fond_User = returnTable.Rows[0][3].ToString();
+            ValueBase.Publicity = returnTable.Rows[0][4].ToString();
             return ValueBase;
         }
 

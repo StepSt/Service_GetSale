@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using NLog;
 
 namespace Service_GetSale
 {
@@ -14,12 +15,17 @@ namespace Service_GetSale
     {
        //public List<IDprocedure> iDproceduresList = new List<IDprocedure>();
        BaseManager baseManager = new BaseManager();
+       private static Logger _logger = LogManager.GetCurrentClassLogger();
        public int GetIDprocedure(int IDshop, int IDuser)
        {
+           _logger.Log(LogLevel.Info, "Функция GetIDprocedure"); //использование логгера
            Random rnd1 = new Random();
-           IDprocedure iDprocedure = new IDprocedure { IDshop_class = IDshop, IDuser_class = IDuser, IDproc_class = int.Parse(rnd1.Next().ToString()) };
+           IDprocedure iDprocedure = new IDprocedure { IDshop_class = IDshop, IDuser_class = IDuser, IDproc_class = rnd1.Next() };
+           _logger.Log(LogLevel.Info, "Создал объект IDprocedure");
            baseManager.SetDataBase_procedur(iDprocedure);
+           _logger.Log(LogLevel.Info, "Записал в базу данных");
            //iDproceduresList.Add(iDprocedure);
+           _logger.Log(LogLevel.Info, "Закончил работу с функцией");
            return iDprocedure.IDproc_class;
         }
 
@@ -30,7 +36,7 @@ namespace Service_GetSale
            DataBase dataBase = new DataBase();
            dataBase = baseManager.GetDataBase(iDprocedure_sale.IDuser_class);
            //iDprocedure_sale = iDproceduresList.Find(x => x.IDproc_class == IDproc);
-           return int.Parse(dataBase.Sale_User.ToString());
+           return int.Parse(dataBase.Sale_User);
        }
 
 

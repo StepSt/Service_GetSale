@@ -6,3 +6,4 @@ c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_Get
 c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Release\Service_GetSale.csprojResolveAssemblyReference.cache
 c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Release\Service_GetSale.dll
 c:\users\admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\obj\Release\Service_GetSale.pdb
+C:\Users\Admin\documents\visual studio 2013\Projects\Service_GetSale\Service_GetSale\bin\NLog.dll

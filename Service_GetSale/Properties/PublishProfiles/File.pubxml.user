@@ -9,8 +9,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>C:\Users\Admin\Google Диск\Work\StepByStep\WebSite</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/NLog.dll">
+      <publishTime>05/26/2016 10:17:25</publishTime>
+    </File>
     <File Include="bin/Service_GetSale.dll">
-      <publishTime>05/25/2016 17:58:26</publishTime>
+      <publishTime>05/26/2016 11:45:47</publishTime>
     </File>
     <File Include="bin/System.Data.SQLite.dll">
       <publishTime>05/23/2016 15:32:52</publishTime>
@@ -21,8 +24,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/x86/SQLite.Interop.dll">
       <publishTime>05/23/2016 15:32:52</publishTime>
     </File>
+    <File Include="Nlog.config">
+      <publishTime>05/26/2016 10:19:51</publishTime>
+    </File>
     <File Include="packages.config">
-      <publishTime>05/23/2016 15:32:53</publishTime>
+      <publishTime>05/26/2016 10:17:26</publishTime>
     </File>
     <File Include="Service1.svc">
       <publishTime>05/23/2016 13:06:16</publishTime>
